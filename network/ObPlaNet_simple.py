@@ -1,34 +1,24 @@
 """该模型对应简单利用动态特征的方法, 将最后两次前景特征经过conv与背景特征融合"""
-from sqlalchemy import true
-import torch
-import torch.nn as nn
-from torchvision import transforms
-import torch.nn.functional as F
-
-import numpy as np
-from PIL import Image
-
 import sys
 
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from PIL import Image
+from sqlalchemy import true
+from torchvision import transforms
+
 sys.path.append("..")
+from backbone.ResNet import (Backbone_ResNet18_in1, Backbone_ResNet18_in3,
+                             Backbone_ResNet18_in3_1, Backbone_ResNet50_in1,
+                             Backbone_ResNet50_in3)
+from backbone.VGG import (Backbone_VGG19_in1, Backbone_VGG19_in3,
+                          Backbone_VGG_in1, Backbone_VGG_in3)
 from network.BaseBlocks import BasicConv2d
-from network.tensor_ops import cus_sample, upsample_add
-
-from network.MyModules import (
-    DDPM,
-    DenseTransLayer,
-)
-
+from network.MyModules import DDPM, DenseTransLayer
 from network.OwnModules import simpleDFN
-
-from backbone.ResNet import Backbone_ResNet50_in1, Backbone_ResNet50_in3, Backbone_ResNet18_in1, Backbone_ResNet18_in3, \
-    Backbone_ResNet18_in3_1
-from backbone.VGG import (
-    Backbone_VGG19_in1,
-    Backbone_VGG19_in3,
-    Backbone_VGG_in1,
-    Backbone_VGG_in3,
-)
+from network.tensor_ops import cus_sample, upsample_add
 
 
 class ObPlaNet_resnet18(nn.Module):

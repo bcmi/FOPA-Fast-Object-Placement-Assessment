@@ -1,18 +1,14 @@
-import os
-
-import csv
 import json
-import re
-import torch
-import numpy as np
-from PIL import Image
-from prefetch_generator import BackgroundGenerator
-from torch.utils.data import DataLoader, Dataset
-from torchvision import transforms
-from config import arg_config
-
+import os
 import sys
 
+import numpy as np
+import torch
+from PIL import Image
+from torch.utils.data import DataLoader, Dataset
+from torchvision import transforms
+
+from config import arg_config
 #sys.path.append("..")
 from data.all_transforms import Compose, JointResize
 
@@ -64,7 +60,11 @@ class CPDataset(Dataset):
             labels_num: (int) 该大小的前景-背景组合中有标注的位置数量
         """
         i, bg_id, bg_path, fg_path, mask_path, scale, pos_label, neg_label, fg_path_2, mask_path_2, w, h = self.data[index] 
-        ## 深度和语义标签没使用的化注释即可
+        ## 获取heatmap的保存名称, heatmap 的命名格式 fg_bg_w_h_scale.jpg
+        fg_name =  fg_path.split('/')[-1][:-4]
+        save_name = fg_name + '_' + str(scale) + '.jpg'
+
+        ## 深度和语义标签没使用的话注释即可
         ## Depth Map by MegaDepth
         if self.datatype == 'train':
             depth_path = os.path.join('./data/data/depth_map/train_depth', bg_id + '.npy')
@@ -139,7 +139,7 @@ class CPDataset(Dataset):
         target_t = self.train_mask_transform(target) * 255 #变成tensor归一化到[0,1]，为了后续计算算回来
         labels_num = (target_t != 255).sum()
 
-        return i, bg_t, mask_t, fg_t, depth, semantic_map, target_t.squeeze(), labels_num, composite_list, feature_pos, w, h
+        return i, bg_t, mask_t, fg_t, depth, semantic_map, target_t.squeeze(), labels_num, composite_list, feature_pos, w, h, save_name
 
 def _semantic_map(bg_id, datatype = 'train'):
     # 调整segmentation的标签

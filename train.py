@@ -6,8 +6,8 @@
 # @Project : HDFNet
 # @GitHub  : https://github.com/lartpang
 import os
-import os.path as osp
 import shutil
+import warnings
 from datetime import datetime
 from pprint import pprint
 
@@ -15,28 +15,27 @@ import numpy as np
 import torch
 import torch.backends.cudnn as torchcudnn
 from PIL import Image
-from torch.nn import BCELoss, CrossEntropyLoss, BCEWithLogitsLoss, MSELoss, DataParallel
+from torch.nn import (BCELoss, BCEWithLogitsLoss, CrossEntropyLoss,
+                      DataParallel, MSELoss)
 from torch.optim import SGD, Adam
 from torchvision import transforms
 from tqdm import tqdm
 
-import warnings
-
 with warnings.catch_warnings(): # 过滤警告
     warnings.filterwarnings("ignore", category=FutureWarning)
+import argparse
+import random
+
 import tensorboard_logger as tb_logger
+import torch.nn as nn
 
 import network
+from backbone.ResNet import pretrained_resnet18_4ch
 from config import arg_config, proj_root
 from data.OBdataset import create_loader
-
-from utils.misc import AvgMeter, construct_path_dict, make_log, pre_mkdir#, CrossEntropyLoss2d
 from utils.metric import CalTotalMetric
-
-from backbone.ResNet import pretrained_resnet18_4ch
-import torch.nn as nn
-import random
-import argparse
+from utils.misc import (AvgMeter, construct_path_dict,  # , CrossEntropyLoss2d
+                        make_log, pre_mkdir)
 
 parser = argparse.ArgumentParser(description='Model2_multiscale_fix_fm_alpha_test')
 parser.add_argument('--kernel_size', type=int, default=3, help='kernel size',
@@ -165,7 +164,7 @@ class Trainer:
                 self.opti.zero_grad()
 
                 ###加载数据
-                index, train_bgs, train_masks, train_fgs, log_depth, semantic_map, train_targets, num, composite_list, feature_pos, w, h = train_data
+                index, train_bgs, train_masks, train_fgs, log_depth, semantic_map, train_targets, num, composite_list, feature_pos, w, h, savename = train_data
          
                 train_bgs = train_bgs.to(self.dev, non_blocking=True)
                 train_masks = train_masks.to(self.dev, non_blocking=True)
@@ -239,7 +238,7 @@ class Trainer:
             tqdm_iter.set_description(f"{self.model_name}:" f"te=>{test_batch_id + 1}")
             with torch.no_grad():
                 # 加载数据
-                index, test_bgs, test_masks, test_fgs, log_depth, semantic_map, test_targets, nums, composite_list, feature_pos, w, h = test_data
+                index, test_bgs, test_masks, test_fgs, log_depth, semantic_map, test_targets, nums, composite_list, feature_pos, w, h, savename = test_data
                 test_bgs = test_bgs.to(self.dev, non_blocking=True)
                 test_masks = test_masks.to(self.dev, non_blocking=True)
                 test_fgs = test_fgs.to(self.dev, non_blocking=True)

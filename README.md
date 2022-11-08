@@ -25,6 +25,7 @@ Download and extrace data from XXX and put it in "data/data". It should contain 
   bg/                   # background images
   fg/                   # foreground images
   mask/                 # mask images for the foreground
+  train2017             # COCO dataset 2017, train
   depth_map             # depth of the background 
   semantic_newlabel     # stuff and thing annotation for the backgound
   train_pair_new.json, train_data_pair.csv  # train annotations 
@@ -41,3 +42,11 @@ python train.py
 ```
 
 # test
+To get the F1 score and balanced accuracy of a specified model, run (default path is './best_weight.pth'):
+```
+python test.py --path <model path>
+```
+To get the heatmaps of train or test set, run:
+```
+python test.py --mode train/test
+```
