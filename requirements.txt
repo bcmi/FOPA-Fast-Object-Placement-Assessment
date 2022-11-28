@@ -1,1 +1,3 @@
 tqdm
+tensorboard_logger
+tensorflow
