@@ -41,7 +41,7 @@ arg_config = {
     "nesterov": False,
     "lr_type": "all_decay",  # 学习率调整的策略
     "lr_decay": 0.9,  # poly
-    "batch_size": 4,
+    "batch_size": 8,
     "num_workers": 6,
     "input_size": 256,  # 输入图片大小
     #"depth_loss":0,
