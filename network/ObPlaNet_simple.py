@@ -6,7 +6,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from PIL import Image
-from sqlalchemy import true
 from torchvision import transforms
 
 sys.path.append("..")
