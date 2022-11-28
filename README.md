@@ -39,7 +39,7 @@ Put them in "data/data". It should contain following directories and files:
   Net_best.pth.tar            # SOPA encoder(resnet 18)
 ```
 
-Download the best model from [Baidu Cloud](https://pan.baidu.com/s/1hci4eIdfyLbDMMcAtsc8fQ) (access code: q712), and put it in './best_weight.pth'.
+Download the best model from [Baidu Cloud](https://pan.baidu.com/s/10gvUPCHA_USIoZYw4w9zwA) (access code: 6wkr), and put it in './best_weight.pth'.
 # Traing
 Before training, modify the trainging parameters in "config.py" accroding to your need, such as "ex_name", "gpu_id" and "batch_size". 
 After that, run:
