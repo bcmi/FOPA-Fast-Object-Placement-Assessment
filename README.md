@@ -18,7 +18,10 @@ Install PyTorch 1.7.0 (higher version should be fine):
 ```
 conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cudatoolkit=10.2 -c pytorch
 ```
-
+Install necessary packages:
+```
+pip install tqdm
+```
 # Data Preparation
 Download and extrace data from [Baidu Cloud](https://pan.baidu.com/s/18FfLt7NCuL4BRhpsDIikBA?pwd=spk7) (access code: spk7) and put it in "data/data". It should contain following directories and files:
 ```
@@ -26,9 +29,9 @@ Download and extrace data from [Baidu Cloud](https://pan.baidu.com/s/18FfLt7NCuL
   bg/                         # background images
   fg/                         # foreground images
   mask/                       # mask images for the foreground
-  train2017                   # COCO dataset 2017, train
-  depth_map                   # depth of the background 
-  semantic_newlabel           # stuff and thing annotation for the backgound
+  train2017/                  # COCO dataset 2017, training set
+  depth_map/                  # depth of the background 
+  semantic_newlabel/          # stuff and thing annotation for the backgound
   train(test)_pair_new.json   # json annotations 
   train(test)_pair_new.json,  # csv files
   Net_best.pth.tar            # SOPA encoder(resnet 18)
