@@ -1,2 +1,0 @@
-tqdm
-tensorboard_logger
