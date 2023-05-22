@@ -29,8 +29,8 @@ pip install -r requirements.txt
 
 
 # Data Preparation
-Download and extract data from [Baidu Cloud](https://pan.baidu.com/s/1-zvAq1o9im4Y1pQvHVzRPg?pwd=azwr) (access code: azwr); 
-Download the SOPA encoder from [Baidu Cloud](https://pan.baidu.com/s/1rSCnjYkIGrkmYO9sl0nwnA?pwd=ky6g) (access code: ky6g)
+Download and extract data from [Baidu Cloud](https://pan.baidu.com/s/1-zvAq1o9im4Y1pQvHVzRPg?pwd=azwr) (access code: azwr).
+Download the SOPA encoder from [Baidu Cloud](https://pan.baidu.com/s/1rSCnjYkIGrkmYO9sl0nwnA?pwd=ky6g) (access code: ky6g). 
 Put them in "data/data". It should contain the following directories and files:
 ```
 <data/data>
@@ -56,7 +56,7 @@ To get the F1 score and balanced accuracy of a specified model, run:
 python test.py --mode evaluate 
 ```
 
-The results obtained with our released model should be F1: 0.778302 bACc: 0.838696.
+The results obtained with our released model should be F1: 0.778302, bAcc: 0.838696.
 
 
 To get the heatmaps predicted by FOPA, run:
