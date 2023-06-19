@@ -151,7 +151,7 @@ if __name__ == "__main__":
     parser.add_argument('--epoch', type=int, default= 20)
     args = parser.parse_args()
     
-    fg_scale_num = 8
+    fg_scale_num = 16
     composite_num = 50
 
     full_path = os.path.join('output', args.path, 'pth', f'{args.epoch}_state_final.pth')
