@@ -7,7 +7,7 @@ from PIL import Image
 from tqdm import tqdm
 from config import arg_config
 
-fg_scale_num = 8
+fg_scale_num = 16
 save_img_flag = True
 
    
