@@ -69,6 +69,23 @@ To get the optimal composite images based on the predicted heatmaps, run:
 python test.py --mode composite
 ```
 
+
+# Multiple Foreground Scales
+For testing multi-scale foregrounds for each foreground-background pair, first run the following command to generate 'test_data_16scales.json' in './data/data' and 'test_16scales' in './data/data/fg', './data/data/mask'.
+```
+python prepare_multi_fg_scales.py
+```
+
+Then, to get the heatmaps of multi-scale foregrounds for each foreground-background pair, run:
+```
+python test_multi_fg_scales.py --mode heatmap
+```
+
+Finally, to get the composite images with top scores for each foreground-background pair, run:
+```
+python test_multi_fg_scales.py --mode composite
+```
+
 # Other Resources
 
 + [Awesome-Object-Placement](https://github.com/bcmi/Awesome-Object-Placement)
