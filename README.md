@@ -29,8 +29,8 @@ pip install -r requirements.txt
 
 
 # Data Preparation
-Download and extract data from [Baidu Cloud](https://pan.baidu.com/s/1-zvAq1o9im4Y1pQvHVzRPg?pwd=azwr) (access code: azwr).
-Download the SOPA encoder from [Baidu Cloud](https://pan.baidu.com/s/1rSCnjYkIGrkmYO9sl0nwnA?pwd=ky6g) (access code: ky6g). 
+Download and extract data from [Baidu Cloud](https://pan.baidu.com/s/10JBpXBMZybEl5FTqBlq-hQ) (access code: 4zf9).
+Download the SOPA encoder from [Baidu Cloud](https://pan.baidu.com/s/1hQGm3ryRONRZpNpU66SJZA) (access code: 1x3n). 
 Put them in "data/data". It should contain the following directories and files:
 ```
 <data/data>
@@ -42,7 +42,7 @@ Put them in "data/data". It should contain the following directories and files:
   SOPA.pth.tar                # SOPA encoder
 ```
 
-Download our pretrained model from [Baidu Cloud](https://pan.baidu.com/s/1kV1x4rvS1VXbkLQ0dYFqjw?pwd=x5ox) (access code: x5ox), and put it in './best_weight.pth'.
+Download our pretrained model from [Baidu Cloud](https://pan.baidu.com/s/15-OBaYE0CF-nDoJrNcCRaw) (access code: uqvb), and put it in './best_weight.pth'.
 
 # Traing
 Before training, modify "config.py" according to your need. After that, run:
