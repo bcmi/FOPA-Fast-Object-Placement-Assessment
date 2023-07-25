@@ -6,7 +6,7 @@ This is the PyTorch implementation of **FOPA** for the following research paper:
 > Li Niu, Qingyang Liu, Zhenchen Liu, Jiangtong Li
 
 
-# Setup
+## Setup
 All the code have been tested on PyTorch 1.7.0. Follow the instructions to run the project.
 
 First, clone the repository:
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ```
 
 
-# Data Preparation
+## Data Preparation
 Download and extract data from [Baidu Cloud](https://pan.baidu.com/s/10JBpXBMZybEl5FTqBlq-hQ) (access code: 4zf9).
 Download the SOPA encoder from [Baidu Cloud](https://pan.baidu.com/s/1hQGm3ryRONRZpNpU66SJZA) (access code: 1x3n). 
 Put them in "data/data". It should contain the following directories and files:
@@ -44,13 +44,13 @@ Put them in "data/data". It should contain the following directories and files:
 
 Download our pretrained model from [Baidu Cloud](https://pan.baidu.com/s/15-OBaYE0CF-nDoJrNcCRaw) (access code: uqvb), and put it in './best_weight.pth'.
 
-# Traing
+## Traing
 Before training, modify "config.py" according to your need. After that, run:
 ```
 python train.py
 ```
 
-# Test
+## Test
 To get the F1 score and balanced accuracy of a specified model, run:
 ```
 python test.py --mode evaluate 
@@ -70,7 +70,7 @@ python test.py --mode composite
 ```
 
 
-# Multiple Foreground Scales
+## Multiple Foreground Scales
 For testing multi-scale foregrounds for each foreground-background pair, first run the following command to generate 'test_data_16scales.json' in './data/data' and 'test_16scales' in './data/data/fg', './data/data/mask'.
 ```
 python prepare_multi_fg_scales.py
@@ -86,7 +86,48 @@ Finally, to get the composite images with top scores for each foreground-backgro
 python test_multi_fg_scales.py --mode composite
 ```
 
-# Other Resources
+## Evalution on Generation Task
+
+Given each background-foreground pair in the test set, we predict 16 rationality score maps for 16 foreground scales and generate composite images with top 50 rationality scores. Then, we randomly sample one from 50 generated composite images per background-foreground pair for Acc and FID evaluation, using the test scripts provided by [GracoNet](https://github.com/bcmi/GracoNet-Object-Placement). The generated composite images for evaluation can be downloaded from [Baidu Cloud](https://pan.baidu.com/s/1qqDiXF4tEhizEoI_2BwkrA) (access code: ppft). The test results of baselines and our method are shown below:
+
+<table>
+  <thead>
+    <tr style="text-align: right;">
+      <th>Method</th>
+      <th>Acc</th>
+      <th>FID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> <a href='https://arxiv.org/abs/1904.05475'>TERSE</a> </td>
+      <td>0.679</td>
+      <td>46.94</td>
+    </tr>
+    <tr>
+      <td><a href='https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123580562.pdf'>PlaceNet</a></td>
+      <td>0.683</td>
+      <td>36.69</td>
+    </tr>
+    <tr>
+      <td><a href='https://arxiv.org/abs/2207.11464'>GracoNet</a></td>
+      <td>0.847</td>
+      <td>27.75</td>
+    </tr>
+    <tr>
+      <td><a href='https://openreview.net/pdf?id=hwHBaL7wur'>IOPRE</a></td>  
+      <td>0.895</td>
+      <td>21.59</td>
+    </tr>
+    <tr>
+      <td>FOPA</td>
+      <td> <b>0.932 </td>
+      <td> <b>19.76 </td>
+    </tr>
+  </tbody>
+</table>
+
+## Other Resources
 
 + [Awesome-Object-Placement](https://github.com/bcmi/Awesome-Object-Placement)
 + [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
