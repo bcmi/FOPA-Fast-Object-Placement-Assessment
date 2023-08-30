@@ -29,8 +29,8 @@ pip install -r requirements.txt
 
 
 ## Data Preparation
-Download and extract data from [Baidu Cloud](https://pan.baidu.com/s/10JBpXBMZybEl5FTqBlq-hQ) (access code: 4zf9).
-Download the SOPA encoder from [Baidu Cloud](https://pan.baidu.com/s/1hQGm3ryRONRZpNpU66SJZA) (access code: 1x3n). 
+Download and extract data from [Baidu Cloud](https://pan.baidu.com/s/10JBpXBMZybEl5FTqBlq-hQ) (access code: 4zf9) or [Google Drive](https://drive.google.com/file/d/1VBTCO3QT1hqzXre1wdWlndJR97SI650d/view?usp=share_link).
+Download the SOPA encoder from [Baidu Cloud](https://pan.baidu.com/s/1hQGm3ryRONRZpNpU66SJZA) (access code: 1x3n) or [Google Drive](https://drive.google.com/file/d/1DMCINPzrBsxXj_9fTKnzB7mQcd8WQi3T/view?usp=sharing). 
 Put them in "data/data". It should contain the following directories and files:
 ```
 <data/data>
@@ -42,7 +42,7 @@ Put them in "data/data". It should contain the following directories and files:
   SOPA.pth.tar                # SOPA encoder
 ```
 
-Download our pretrained model from [Baidu Cloud](https://pan.baidu.com/s/15-OBaYE0CF-nDoJrNcCRaw) (access code: uqvb), and put it in './best_weight.pth'.
+Download our pretrained model from [Baidu Cloud](https://pan.baidu.com/s/15-OBaYE0CF-nDoJrNcCRaw) (access code: uqvb) or [Google Drive](https://drive.google.com/file/d/1HTP6bSmuMb2Dux3vEX2fJc3apjLBjy0q/view?usp=sharing), and put it in './best_weight.pth'.
 
 ## Traing
 Before training, modify "config.py" according to your need. After that, run:
@@ -88,7 +88,7 @@ python test_multi_fg_scales.py --mode composite
 
 ## Evalution on Generation Task
 
-Given each background-foreground pair in the test set, we predict 16 rationality score maps for 16 foreground scales and generate composite images with top 50 rationality scores. Then, we randomly sample one from 50 generated composite images per background-foreground pair for Acc and FID evaluation, using the test scripts provided by [GracoNet](https://github.com/bcmi/GracoNet-Object-Placement). The generated composite images for evaluation can be downloaded from [Baidu Cloud](https://pan.baidu.com/s/1qqDiXF4tEhizEoI_2BwkrA) (access code: ppft). The test results of baselines and our method are shown below:
+Given each background-foreground pair in the test set, we predict 16 rationality score maps for 16 foreground scales and generate composite images with top 50 rationality scores. Then, we randomly sample one from 50 generated composite images per background-foreground pair for Acc and FID evaluation, using the test scripts provided by [GracoNet](https://github.com/bcmi/GracoNet-Object-Placement). The generated composite images for evaluation can be downloaded from [Baidu Cloud](https://pan.baidu.com/s/1qqDiXF4tEhizEoI_2BwkrA) (access code: ppft) or [Google Drive](https://drive.google.com/file/d/1yvuoVum_-FMK7lOvrvpx35IdvrV58bTm/view?usp=share_link). The test results of baselines and our method are shown below:
 
 <table>
   <thead>
