@@ -91,6 +91,32 @@ Finally, to get the composite images with top scores for each foreground-backgro
 python test_multi_fg_scales.py --mode composite
 ```
 
+## Evalution on Discriminative Task
+
+We show the results reported in the paper. FOPA can achieve comparable results with SOPA.
+<table>
+  <thead>
+    <tr style="text-align: right;">
+      <th>Method</th>
+      <th>F1</th>
+      <th>bAcc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> <a href='https://arxiv.org/pdf/2107.01889.pdf'>SOPA</a> </td>
+      <td>0.780</td>
+      <td>0.842</td>
+    </tr>
+    <tr>
+      <td>FOPA</td>
+      <td>0.776</td>
+      <td>0.840</td>
+    </tr>
+  
+  </tbody>
+</table>
+
 ## Evalution on Generation Task
 
 Given each background-foreground pair in the test set, we predict 16 rationality score maps for 16 foreground scales and generate composite images with top 50 rationality scores. Then, we randomly sample one from 50 generated composite images per background-foreground pair for Acc and FID evaluation, using the test scripts provided by [GracoNet](https://github.com/bcmi/GracoNet-Object-Placement). The generated composite images for evaluation can be downloaded from [Baidu Cloud](https://pan.baidu.com/s/1qqDiXF4tEhizEoI_2BwkrA) (access code: ppft) or [Google Drive](https://drive.google.com/file/d/1yvuoVum_-FMK7lOvrvpx35IdvrV58bTm/view?usp=share_link). The test results of baselines and our method are shown below:
