@@ -1,8 +1,3 @@
-
-# ![hot](https://bcmi.sjtu.edu.cn/~niuli/images/fire.png) Our lab has released the image composition toolbox [libcom](https://github.com/bcmi/libcom), which integrates all the functions related to image composition. The toolbox would be continuously upgraded. Welcome to visit and try :-)
----
-
-
 **FOPA: Fast Object Placement Assessment**
 =====
 This is the PyTorch implementation of **FOPA** for the following research paper:
