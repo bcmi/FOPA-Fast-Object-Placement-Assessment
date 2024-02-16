@@ -44,7 +44,7 @@ Put them in "data/data". It should contain the following directories and files:
 
 Download our pretrained model from [Baidu Cloud](https://pan.baidu.com/s/15-OBaYE0CF-nDoJrNcCRaw) (access code: uqvb) or [Google Drive](https://drive.google.com/file/d/1HTP6bSmuMb2Dux3vEX2fJc3apjLBjy0q/view?usp=sharing), and put it in './best_weight.pth'.
 
-## Traing
+## Training
 Before training, modify "config.py" according to your need. After that, run:
 ```
 python train.py
