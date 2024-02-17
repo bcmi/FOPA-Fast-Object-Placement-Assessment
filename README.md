@@ -1,6 +1,6 @@
 **FOPA: Fast Object Placement Assessment**
 =====
-This is the PyTorch implementation of **FOPA** for the following research paper:
+This is the PyTorch implementation of **FOPA** for the following research paper.  **FOPA is the first discriminative approach for object placement task.**
 > **Fast Object Placement Assessment**  [[arXiv]](https://arxiv.org/pdf/2205.14280.pdf)<br>
 >
 > Li Niu, Qingyang Liu, Zhenchen Liu, Jiangtong Li
