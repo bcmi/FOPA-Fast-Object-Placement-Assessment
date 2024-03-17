@@ -5,6 +5,7 @@ This is the PyTorch implementation of **FOPA** for the following research paper.
 >
 > Li Niu, Qingyang Liu, Zhenchen Liu, Jiangtong Li
 
+**Our FOPA has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try ＼(^▽^)／** 
 
 ## Setup
 All the code have been tested on PyTorch 1.7.0. Follow the instructions to run the project.
