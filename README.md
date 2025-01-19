@@ -159,7 +159,7 @@ Given each background-foreground pair in the test set, we predict 16 rationality
 ## Other Resources
 
 + [Awesome-Object-Placement](https://github.com/bcmi/Awesome-Object-Placement)
-+ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
++ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Object-Insertion)
 
 
 ## Bibtex
