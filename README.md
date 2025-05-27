@@ -32,8 +32,8 @@ pip install -r requirements.txt
 
 
 ## Data Preparation
-Download and extract data from [Baidu Cloud](https://pan.baidu.com/s/10JBpXBMZybEl5FTqBlq-hQ) (access code: 4zf9) or [Google Drive](https://drive.google.com/file/d/1VBTCO3QT1hqzXre1wdWlndJR97SI650d/view?usp=share_link).
-Download the SOPA encoder from [Baidu Cloud](https://pan.baidu.com/s/1hQGm3ryRONRZpNpU66SJZA) (access code: 1x3n) or [Google Drive](https://drive.google.com/file/d/1DMCINPzrBsxXj_9fTKnzB7mQcd8WQi3T/view?usp=sharing). 
+Download and extract data from [Baidu Cloud](https://pan.baidu.com/s/10JBpXBMZybEl5FTqBlq-hQ) (access code: 4zf9) or [Dropbox](https://www.dropbox.com/scl/fi/c05wk038piy224sba6jpi/data.rar?rlkey=tghrxjjgo2g93le64tb1xymvq&st=u9nf6hbf&dl=0).
+Download the SOPA encoder from [Baidu Cloud](https://pan.baidu.com/s/1hQGm3ryRONRZpNpU66SJZA) (access code: 1x3n) or [Dropbox](https://www.dropbox.com/scl/fi/tlkbmqebokjloe0i1yfpy/SOPA.pth.tar?rlkey=8mzzc53wy6rjqz69o5lkzusau&st=32t23vwm&dl=0). 
 Put them in "data/data". It should contain the following directories and files:
 ```
 <data/data>
@@ -45,7 +45,7 @@ Put them in "data/data". It should contain the following directories and files:
   SOPA.pth.tar                # SOPA encoder
 ```
 
-Download our pretrained model from [Baidu Cloud](https://pan.baidu.com/s/15-OBaYE0CF-nDoJrNcCRaw) (access code: uqvb) or [Google Drive](https://drive.google.com/file/d/1HTP6bSmuMb2Dux3vEX2fJc3apjLBjy0q/view?usp=sharing), and put it in './best_weight.pth'.
+Download our pretrained model from [Baidu Cloud](https://pan.baidu.com/s/15-OBaYE0CF-nDoJrNcCRaw) (access code: uqvb) or [Dropbox](https://www.dropbox.com/scl/fi/q3i6fryoumzr15piuq9pr/best_weight.pth?rlkey=wahho3h18k3ntsaw9pvdyfvea&st=vp2dhpa5&dl=0), and put it in './best_weight.pth'.
 
 ## Training
 Before training, modify "config.py" according to your need. After that, run:
