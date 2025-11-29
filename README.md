@@ -9,6 +9,10 @@ This is the PyTorch implementation of **FOPA** for the following research paper.
 
 If you want to change the backbone to transformer, you can refer to [TopNet](https://github.com/bcmi/TopNet-Object-Placement). 
 
+## Online Demo
+
+Try this [online demo](http://libcom.ustcnewly.com/) for image composition and have fun!
+
 ## Setup
 All the code have been tested on PyTorch 1.7.0. Follow the instructions to run the project.
 
