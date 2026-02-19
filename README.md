@@ -13,6 +13,8 @@ If you want to change the backbone to transformer, you can refer to [TopNet](htt
 
 Try this [online demo](http://libcom.ustcnewly.com/) for image composition and have fun!
 
+[![]](https://github.com/user-attachments/assets/87416ec5-2461-42cb-9f2d-5030b1e1b5ec)
+
 ## Setup
 All the code have been tested on PyTorch 1.7.0. Follow the instructions to run the project.
 
