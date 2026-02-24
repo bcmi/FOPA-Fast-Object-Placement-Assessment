@@ -11,7 +11,7 @@ If you want to change the backbone to transformer, you can refer to [TopNet](htt
 
 ## Online Demo
 
-Try this [online demo](http://libcom.ustcnewly.com/) for image composition and have fun!
+Our FOPA has been integrated into [libcom](https://github.com/bcmi/libcom) toolbox to predict placement rationality heatmap. Try this [online demo](http://libcom.ustcnewly.com/) for image composition (object insertion) built upon [libcom](https://github.com/bcmi/libcom) toolbox and have fun!
 
 [![]](https://github.com/user-attachments/assets/87416ec5-2461-42cb-9f2d-5030b1e1b5ec)
 
