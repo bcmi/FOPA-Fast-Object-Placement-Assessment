@@ -1,5 +1,11 @@
 **FOPA: Fast Object Placement Assessment**
 =====
+
+Welcome to scan the WeChat QR code to join the discussion group on image composition/compositing, object insertion/addition.
+<p align="center">
+<img width="150" height="150" alt="Image" src="https://github.com/user-attachments/assets/8572a7c4-0f62-4a5f-bc06-9a1d9fcb14e3" />
+</p>
+
 This is the PyTorch implementation of **FOPA** for the following research paper.  **FOPA is the first discriminative approach for object placement task.**
 > **Fast Object Placement Assessment**  [[arXiv]](https://arxiv.org/pdf/2205.14280.pdf)<br>
 >
